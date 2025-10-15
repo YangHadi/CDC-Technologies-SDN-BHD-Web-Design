@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
+
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Index - CDC TECHNOLOGIES SDN BHD</title>
   <meta name="description" content="CDC Technologies Sdn Bhd provides IT solutions, data center services, submarine fiber optic deployment, and application development since 2000.">
   <meta name="keywords" content="IT Solutions, Data Center, Fiber Optics, Application Development, CDC Technologies Malaysia">
   <meta name="author" content="CDC Technologies Sdn Bhd">
-
 
   <!-- Icons -->
   <link href="assets/img/main-logo.png" rel="icon">
@@ -26,7 +26,6 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -71,7 +70,7 @@
 
           <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right" data-aos-delay="200">
             <div class="hero-content">
-              <h1 class="hero-title">DESIGN, DEPLOY, MAINTENANCE</h1>
+              <h1 class="hero-title">DESIGN, DEPLOY, MAINTAIN</h1>
               <p class="hero-description">We design, deploy, and maintain reliable IT solutions to keep your business running smoothly.</p>
               <div class="hero-actions">
                 <a href="#about" class="btn-primary">Start Your Journey</a>
@@ -100,9 +99,7 @@
               </div>
             </div>
           </div>
-
         </div>
-
       </div>
 
     </section><!-- /Hero Section -->
@@ -154,17 +151,16 @@
                       <b>AAAS</b> Application As A service,
                       <br>
                       <b>PAAS</b> Platform As A Service</p>
-
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
       </div>
-    
 
+
+      <!-- Stats Section -->
       <section id="stats" class="stats section">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
@@ -251,9 +247,11 @@
               "loop": true,
               "speed": 600,
               "autoplay": {
-                "delay": 1000
+                "delay": 1500
               },
               "slidesPerView": "auto",
+              "observer": true,
+              "observeParents": true,
               "pagination": {
                 "el": ".swiper-pagination",
                 "type": "bullets",
@@ -292,72 +290,66 @@
             <div class="swiper-slide"><img src="assets/img/clients/client10.png" class="img-fluid" alt=""></div>
           </div>
         </div>
-
       </div>
     </section>
 <!-- /Clients Section -->
 
     <!-- Partners Section -->
-    <div class="container" data-aos="fade-up" data-aos-delay="100">
-            <div class="content-wrapper">
-              <div class="section-header">
+<div class="container" data-aos="fade-up" data-aos-delay="100">
+  <div class="content-wrapper">
+    <div class="section-header">
       <h2>Partners who <span>support us</span></h2>
-              </div>
-              <p class="lead-text">We believes in long-term strategic partnerships. Our trusted partners have been providing quality services in the development of our solutions.</p>
-            </div>
-              </div>
+    </div>
+    <p class="lead-text">We believes in long-term strategic partnerships. Our trusted partners have been providing quality services in the development of our solutions.</p>
+  </div>
+</div>
 
-      
-      <section id="partners" class="partners section"> 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+<section id="partners" class="partners section"> 
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="swiper init-swiper">
+      <script type="application/json" class="swiper-config">
+        {
+          "loop": true,
+          "speed": 600,
+          "autoplay": {
+            "delay": 1500,
+            "disableOnInteraction": false
+          },
+          "observer": true,
+          "observeParents": true,
+          "pagination": {
+            "el": ".partners-pagination",
+            "type": "bullets",
+            "clickable": true
+          },
+          "breakpoints": {
+            "320": { "slidesPerView": 2, "spaceBetween": 20 },
+            "480": { "slidesPerView": 3, "spaceBetween": 30 },
+            "640": { "slidesPerView": 4, "spaceBetween": 40 },
+            "992": { "slidesPerView": 5, "spaceBetween": 50 }
+          }
+        }
+      </script>
 
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000,
-                "disableOnInteraction": false
-              },
-              "observer": true,
-              "observeParents": true,
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 2,
-                  "spaceBetween": 20
-                },
-                "480": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 30
-                },
-                "640": {
-                  "slidesPerView": 4,
-                  "spaceBetween": 40
-                },
-                "992": {
-                  "slidesPerView": 5,
-                  "spaceBetween": 50
-                }
-              }
-            }
-          </script>
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/img/partners/partner1.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/partners/partner2.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/partners/partner3.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/partners/partner4.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/partners/partner5.png" class="img-fluid" alt=""></div>
-          </div>
-        </div>
+      <div class="swiper-wrapper align-items-center">
+        <div class="swiper-slide"><img src="assets/img/partners/partner1.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/partners/partner2.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/partners/partner3.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/partners/partner4.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/partners/partner5.png" class="img-fluid" alt=""></div>
+
+        <!-- 🔁 Duplicate for seamless looping -->
+        <div class="swiper-slide"><img src="assets/img/partners/partner1.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/partners/partner2.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/partners/partner3.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/partners/partner4.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/partners/partner5.png" class="img-fluid" alt=""></div>
       </div>
-      </section>
-      <!-- /Partners Section -->
+    </div>
+  </div>
+</section>
+<!-- /Partners Section -->
+
 
 <!-- Team Section -->
 <div class="team-section-bg" data-aos="fade-up" data-aos-delay="100">
@@ -455,214 +447,139 @@
     </section><!-- /About Section -->
 
     <!-- Data Centre Section -->
+      <section id="datacentre" class="datacentre section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="section-header text-center mb-5">
+            <span class="section-badge">OUR DATA CENTRE</span>
+            <h2>Let's take a look at <span>our Data Centre!</span></h2>
+          </div>
 
-<section id="datacentre" class="datacentre section">
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <div class="section-header text-center mb-5">
-      <span class="section-badge">OUR DATA CENTRE</span>
-      <h2>Let's take a look at <span>our Data Centre!</span></h2>
-    </div>
+          <!-- Tabs Navigation -->
+          <ul class="nav nav-tabs justify-content-center mb-4" id="datacentreTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="exterior-tab" data-bs-toggle="tab" data-bs-target="#exterior" type="button" role="tab">Exterior</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="lobby-tab" data-bs-toggle="tab" data-bs-target="#lobby" type="button" role="tab">Lobby</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="office-tab" data-bs-toggle="tab" data-bs-target="#office" type="button" role="tab">Office</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="noc-tab" data-bs-toggle="tab" data-bs-target="#noc" type="button" role="tab">NOC</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="serverfarm-tab" data-bs-toggle="tab" data-bs-target="#serverfarm" type="button" role="tab">Server Farm 1</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="warehouse-tab" data-bs-toggle="tab" data-bs-target="#warehouse" type="button" role="tab">Warehouse</button>
+            </li>
+          </ul>
 
+          <!-- Progress Bar -->
+          <div class="tab-progress mt-2 mb-3">
+            <div class="tab-progress-bar"></div>
+          </div>
 
-    <!-- Exterior View -->
-    <div class="datacentre-group mb-5">
-      <h3 class="mb-3">Exterior View of the Centre</h3>
-      <div class="row g-4">
-        <div class="col-md-6">
-          <a href="assets/img/datacentre/ext1.jpg" class="glightbox" data-gallery="ExteriorView-gallery">
-            <img src="assets/img/datacentre/ext1.jpg" alt="Front Side 1" class="img-fluid datacentre-img square">
-          </a>
-        </div>
-        <div class="col-md-6">
-          <a href="assets/img/datacentre/ext2.jpg" class="glightbox" data-gallery="ExteriorView-gallery">
-            <img src="assets/img/datacentre/ext2.jpg" alt="Front Side 2" class="img-fluid datacentre-img square">
-          </a>
-        </div>
-      </div>
-    </div>
+          <!-- Tabs Content -->
+          <div class="tab-content" id="datacentreTabsContent">
 
-    <!-- Interior Views -->
-    <div class="datacentre-group mb-5">
-      <h3 class="mb-3">Interior View of the Centre</h3>
+            <!-- Exterior Tab -->
+            <div class="tab-pane fade show active" id="exterior" role="tabpanel">
+              <h3 class="mb-3">Exterior View of the Centre</h3>
+              <div class="row g-4">
+                <div class="col-md-3"><a href="assets/img/datacentre/ext1.jpg" class="glightbox" data-gallery="ExteriorView-gallery"><img src="assets/img/datacentre/ext1.jpg" alt="Front Side 1" class="img-fluid datacentre-img square"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/ext2.jpg" class="glightbox" data-gallery="ExteriorView-gallery"><img src="assets/img/datacentre/ext2.jpg" alt="Front Side 2" class="img-fluid datacentre-img square"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/ext3.png" class="glightbox" data-gallery="ExteriorView-gallery"><img src="assets/img/datacentre/ext3.png" alt="Front Side 3" class="img-fluid datacentre-img square"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/ext4.png" class="glightbox" data-gallery="ExteriorView-gallery"><img src="assets/img/datacentre/ext4.png" alt="Front Side 4" class="img-fluid datacentre-img square"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/ext5.png" class="glightbox" data-gallery="ExteriorView-gallery"><img src="assets/img/datacentre/ext5.png" alt="Front Side 5" class="img-fluid datacentre-img square"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/ext6.png" class="glightbox" data-gallery="ExteriorView-gallery"><img src="assets/img/datacentre/ext6.png" alt="Front Side 6" class="img-fluid datacentre-img square"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/ext7.png" class="glightbox" data-gallery="ExteriorView-gallery"><img src="assets/img/datacentre/ext7.png" alt="Front Side 7" class="img-fluid datacentre-img square"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/ext8.png" class="glightbox" data-gallery="ExteriorView-gallery"><img src="assets/img/datacentre/ext8.png" alt="Front Side 8" class="img-fluid datacentre-img square"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/ext9.png" class="glightbox" data-gallery="ExteriorView-gallery"><img src="assets/img/datacentre/ext9.png" alt="Front Side 9" class="img-fluid datacentre-img square"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/ext10.png" class="glightbox" data-gallery="ExteriorView-gallery"><img src="assets/img/datacentre/ext10.png" alt="Front Side 10" class="img-fluid datacentre-img square"></a></div>
+              </div>
+            </div>
 
-      <h5>Main Entrance Lobby</h5>
-      <div class="row g-4 mb-4">
-        <div class="col-md-3">
-          <a href="assets/img/datacentre/lobby1.jpg" class="glightbox" data-gallery="main-lobby-gallery">
-            <img src="assets/img/datacentre/lobby1.jpg" alt="Lobby 1" class="img-fluid datacentre-img landscape">
-          </a>
-        </div>
-        <div class="col-md-3">
-          <a href="assets/img/datacentre/lobby2.jpg" class="glightbox" data-gallery="main-lobby-gallery">
-            <img src="assets/img/datacentre/lobby2.jpg" alt="Lobby 2" class="img-fluid datacentre-img landscape">
-          </a>
-        </div>
-        <div class="col-md-3">
-          <a href="assets/img/datacentre/lobby3.jpg" class="glightbox" data-gallery="main-lobby-gallery">
-            <img src="assets/img/datacentre/lobby3.jpg" alt="Lobby 3" class="img-fluid datacentre-img landscape">
-          </a>
-        </div>
-        <div class="col-md-3">
-          <a href="assets/img/datacentre/lobby4.jpg" class="glightbox" data-gallery="main-lobby-gallery">
-            <img src="assets/img/datacentre/lobby4.jpg" alt="Lobby 4" class="img-fluid datacentre-img landscape">
-          </a>
-        </div>
-      </div>
+            <!-- Lobby Tab -->
+            <div class="tab-pane fade" id="lobby" role="tabpanel">
+              <h3 class="mb-3">Main Lobby</h3>
+              <div class="row g-4">
+                <div class="col-md-3"><a href="assets/img/datacentre/lobby1.jpg" class="glightbox" data-gallery="main-lobby-gallery"><img src="assets/img/datacentre/lobby1.jpg" class="img-fluid"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/lobby2.jpg" class="glightbox" data-gallery="main-lobby-gallery"><img src="assets/img/datacentre/lobby2.jpg" class="img-fluid"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/lobby3.jpg" class="glightbox" data-gallery="main-lobby-gallery"><img src="assets/img/datacentre/lobby3.jpg" class="img-fluid"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/lobby4.jpg" class="glightbox" data-gallery="main-lobby-gallery"><img src="assets/img/datacentre/lobby4.jpg" class="img-fluid"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/lobby5.png" class="glightbox" data-gallery="main-lobby-gallery"><img src="assets/img/datacentre/lobby5.png" class="img-fluid"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/lobby6.png" class="glightbox" data-gallery="main-lobby-gallery"><img src="assets/img/datacentre/lobby6.png" class="img-fluid"></a></div>
+              </div>
+            </div>
 
-      <h5>Office Area</h5>
-      <div class="row g-4 mb-4">
-        <div class="col-md-3">
-          <a href="assets/img/datacentre/office1.jpg" class="glightbox" data-gallery="office-gallery">
-            <img src="assets/img/datacentre/office1.jpg" alt="Office 1" class="img-fluid datacentre-img portrait">
-          </a>
-        </div>
-        <div class="col-md-3">
-          <a href="assets/img/datacentre/office2.jpg" class="glightbox" data-gallery="office-gallery">
-            <img src="assets/img/datacentre/office2.jpg" alt="Office 2" class="img-fluid datacentre-img portrait">
-          </a>
-        </div>
-        <div class="col-md-3">
-          <a href="assets/img/datacentre/office3.jpg" class="glightbox" data-gallery="office-gallery">
-            <img src="assets/img/datacentre/office3.jpg" alt="Office 3" class="img-fluid datacentre-img portrait">
-          </a>
-        </div>
-        <div class="col-md-3">
-          <a href="assets/img/datacentre/office4.jpg" class="glightbox" data-gallery="office-gallery">
-            <img src="assets/img/datacentre/office4.jpg" alt="Office 4" class="img-fluid datacentre-img portrait">
-          </a>
-        </div>
-      </div>
+            <!-- Office Tab -->
+            <div class="tab-pane fade" id="office" role="tabpanel">
+              <h3 class="mb-3">Office Area</h3>
+              <div class="row g-4">
+                <div class="col-md-3"><a href="assets/img/datacentre/office1.jpg" class="glightbox" data-gallery="office-gallery"><img src="assets/img/datacentre/office1.jpg" class="img-fluid"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/office2.jpg" class="glightbox" data-gallery="office-gallery"><img src="assets/img/datacentre/office2.jpg" class="img-fluid"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/office3.jpg" class="glightbox" data-gallery="office-gallery"><img src="assets/img/datacentre/office3.jpg" class="img-fluid"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/office4.jpg" class="glightbox" data-gallery="office-gallery"><img src="assets/img/datacentre/office4.jpg" class="img-fluid"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/office5.png" class="glightbox" data-gallery="office-gallery"><img src="assets/img/datacentre/office5.png" class="img-fluid"></a></div>
+              </div>
+            </div>
 
-      <h5>NOC Room</h5>
-      <div class="row g-4 mb-4">
-        <div class="col-md-3">
-          <a href="assets/img/datacentre/noc1.jpg" class="glightbox" data-gallery="noc-gallery">
-            <img src="assets/img/datacentre/noc1.jpg" alt="NOC 1" class="img-fluid datacentre-img portrait">
-          </a>
-        </div>
-        <div class="col-md-3">
-          <a href="assets/img/datacentre/noc2.jpg" class="glightbox" data-gallery="noc-gallery">
-            <img src="assets/img/datacentre/noc2.jpg" alt="NOC 2" class="img-fluid datacentre-img portrait">
-          </a>
-        </div>
-        <div class="col-md-3">
-          <a href="assets/img/datacentre/noc3.jpg" class="glightbox" data-gallery="noc-gallery">
-            <img src="assets/img/datacentre/noc3.jpg" alt="NOC 3" class="img-fluid datacentre-img portrait">
-          </a>
-        </div>
-        <div class="col-md-3">
-          <a href="assets/img/datacentre/noc4.jpg" class="glightbox" data-gallery="noc-gallery">
-            <img src="assets/img/datacentre/noc4.jpg" alt="NOC 4" class="img-fluid datacentre-img portrait">
-          </a>
-        </div>
-        <div class="col-md-3">
-          <a href="assets/img/datacentre/noc5.jpg" class="glightbox" data-gallery="noc-gallery">
-            <img src="assets/img/datacentre/noc5.jpg" alt="NOC 5" class="img-fluid datacentre-img portrait">
-          </a>
-        </div>
-        <div class="col-md-3">
-          <a href="assets/img/datacentre/noc6.jpg" class="glightbox" data-gallery="noc-gallery">
-            <img src="assets/img/datacentre/noc6.jpg" alt="NOC 6" class="img-fluid datacentre-img portrait">
-          </a>
-        </div>
-        <div class="col-md-3">
-          <a href="assets/img/datacentre/noc7.jpg" class="glightbox" data-gallery="noc-gallery">
-            <img src="assets/img/datacentre/noc7.jpg" alt="NOC 7" class="img-fluid datacentre-img portrait">
-          </a>
-        </div>
-      </div>
+            <!-- NOC Tab -->
+            <div class="tab-pane fade" id="noc" role="tabpanel">
+              <h3 class="mb-3">Network Operation Centre (NOC)</h3>
+              <div class="row g-4">
+                <div class="col-md-3"><a href="assets/img/datacentre/noc1.jpg" class="glightbox" data-gallery="noc-gallery"><img src="assets/img/datacentre/noc1.jpg" class="img-fluid"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/noc2.jpg" class="glightbox" data-gallery="noc-gallery"><img src="assets/img/datacentre/noc2.jpg" class="img-fluid"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/noc3.jpg" class="glightbox" data-gallery="noc-gallery"><img src="assets/img/datacentre/noc3.jpg" class="img-fluid"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/noc4.jpg" class="glightbox" data-gallery="noc-gallery"><img src="assets/img/datacentre/noc4.jpg" class="img-fluid"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/noc5.jpg" class="glightbox" data-gallery="noc-gallery"><img src="assets/img/datacentre/noc5.jpg" class="img-fluid"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/noc6.jpg" class="glightbox" data-gallery="noc-gallery"><img src="assets/img/datacentre/noc6.jpg" class="img-fluid"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/noc7.jpg" class="glightbox" data-gallery="noc-gallery"><img src="assets/img/datacentre/noc7.jpg" class="img-fluid"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/noc8.png" class="glightbox" data-gallery="noc-gallery"><img src="assets/img/datacentre/noc8.png" class="img-fluid"></a></div>
+              </div>
+            </div>
 
-      <h5>Server Room</h5>
-      <div class="row g-4 mb-4">
-        <div class="col-md-3">
-          <a href="assets/img/datacentre/server1.jpg" class="glightbox" data-gallery="server-gallery">
-            <img src="assets/img/datacentre/server1.jpg" alt="Server 1" class="img-fluid datacentre-img portrait">
-          </a>
-        </div>
-        <div class="col-md-3">
-          <a href="assets/img/datacentre/server2.jpg" class="glightbox" data-gallery="server-gallery">
-            <img src="assets/img/datacentre/server2.jpg" alt="Server 2" class="img-fluid datacentre-img portrait">
-          </a>
-        </div>
-        <div class="col-md-3">
-          <a href="assets/img/datacentre/server3.jpg" class="glightbox" data-gallery="server-gallery">
-            <img src="assets/img/datacentre/server3.jpg" alt="Server 3" class="img-fluid datacentre-img portrait">
-          </a>
-        </div>
-        <div class="col-md-3">
-          <a href="assets/img/datacentre/server4.jpg" class="glightbox" data-gallery="server-gallery">
-            <img src="assets/img/datacentre/server4.jpg" alt="Server 4" class="img-fluid datacentre-img portrait">
-          </a>
-        </div>
-        <div class="col-md-3">
-          <a href="assets/img/datacentre/server5.jpg" class="glightbox" data-gallery="server-gallery">
-            <img src="assets/img/datacentre/server5.jpg" alt="Server 5" class="img-fluid datacentre-img portrait">
-          </a>
-        </div>
-        <div class="col-md-3">
-          <a href="assets/img/datacentre/server6.jpg" class="glightbox" data-gallery="server-gallery">
-            <img src="assets/img/datacentre/server6.jpg" alt="Server 6" class="img-fluid datacentre-img portrait">
-          </a>
-        </div>
-        <div class="col-md-3">
-          <a href="assets/img/datacentre/server7.jpg" class="glightbox" data-gallery="server-gallery">
-            <img src="assets/img/datacentre/server7.jpg" alt="Server 7" class="img-fluid datacentre-img landscape">
-          </a>
-        </div>
-        <div class="col-md-3">
-          <a href="assets/img/datacentre/server8.jpg" class="glightbox" data-gallery="server-gallery">
-            <img src="assets/img/datacentre/server8.jpg" alt="Server 8" class="img-fluid datacentre-img landscape">
-          </a>
-        </div>
-        <div class="col-md-3">
-          <a href="assets/img/datacentre/server9.jpg" class="glightbox" data-gallery="server-gallery">
-            <img src="assets/img/datacentre/server9.jpg" alt="Server 9" class="img-fluid datacentre-img landscape">
-          </a>
-        </div>
-        <div class="col-md-3">
-          <a href="assets/img/datacentre/server10.jpg" class="glightbox" data-gallery="server-gallery">
-            <img src="assets/img/datacentre/server10.jpg" alt="Server 10" class="img-fluid datacentre-img portrait">
-          </a>
-        </div>
-        <div class="col-md-3">
-          <a href="assets/img/datacentre/server11.jpg" class="glightbox" data-gallery="server-gallery">
-            <img src="assets/img/datacentre/server11.jpg" alt="Server 11" class="img-fluid datacentre-img portrait">
-          </a>
-        </div>
-        <div class="col-md-3">
-          <a href="assets/img/datacentre/server12.jpg" class="glightbox" data-gallery="server-gallery">
-            <img src="assets/img/datacentre/server12.jpg" alt="Server 12" class="img-fluid datacentre-img portrait">
-          </a>
-        </div>
-      </div>
+            <!-- Server Farm Tab -->
+            <div class="tab-pane fade" id="serverfarm" role="tabpanel">
+              <h3 class="mb-3">Open Rack Server</h3>
+              <div class="row g-4">
+                <!-- serverfarm1-1 to serverfarm1-14 -->
+                <div class="col-md-3"><a href="assets/img/datacentre/serverfarm1-1.jpg" class="glightbox" data-gallery="server1-gallery"><img src="assets/img/datacentre/serverfarm1-1.jpg" class="img-fluid datacentre-img square"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/serverfarm1-2.jpg" class="glightbox" data-gallery="server1-gallery"><img src="assets/img/datacentre/serverfarm1-2.jpg" class="img-fluid datacentre-img square"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/serverfarm1-3.jpg" class="glightbox" data-gallery="server1-gallery"><img src="assets/img/datacentre/serverfarm1-3.jpg" class="img-fluid datacentre-img square"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/serverfarm1-4.jpg" class="glightbox" data-gallery="server1-gallery"><img src="assets/img/datacentre/serverfarm1-4.jpg" class="img-fluid datacentre-img square"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/serverfarm1-5.jpg" class="glightbox" data-gallery="server1-gallery"><img src="assets/img/datacentre/serverfarm1-5.jpg" class="img-fluid datacentre-img square"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/serverfarm1-6.jpg" class="glightbox" data-gallery="server1-gallery"><img src="assets/img/datacentre/serverfarm1-6.jpg" class="img-fluid datacentre-img square"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/serverfarm1-7.jpg" class="glightbox" data-gallery="server1-gallery"><img src="assets/img/datacentre/serverfarm1-7.jpg" class="img-fluid datacentre-img square"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/serverfarm1-8.jpg" class="glightbox" data-gallery="server1-gallery"><img src="assets/img/datacentre/serverfarm1-8.jpg" class="img-fluid datacentre-img square"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/serverfarm1-9.jpg" class="glightbox" data-gallery="server1-gallery"><img src="assets/img/datacentre/serverfarm1-9.jpg" class="img-fluid datacentre-img square"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/serverfarm1-10.jpg" class="glightbox" data-gallery="server1-gallery"><img src="assets/img/datacentre/serverfarm1-10.jpg" class="img-fluid datacentre-img square"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/serverfarm1-11.jpg" class="glightbox" data-gallery="server1-gallery"><img src="assets/img/datacentre/serverfarm1-11.jpg" class="img-fluid datacentre-img square"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/serverfarm1-12.jpg" class="glightbox" data-gallery="server1-gallery"><img src="assets/img/datacentre/serverfarm1-12.jpg" class="img-fluid datacentre-img square"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/serverfarm1-13.png" class="glightbox" data-gallery="server1-gallery"><img src="assets/img/datacentre/serverfarm1-13.png" class="img-fluid datacentre-img square"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/serverfarm1-14.png" class="glightbox" data-gallery="server1-gallery"><img src="assets/img/datacentre/serverfarm1-14.png" class="img-fluid datacentre-img square"></a></div>
+              </div>
+            </div>
 
-      <h5>Warehouse</h5>
-      <div class="row g-4 mb-4">
-        <div class="col-md-3">
-          <a href="assets/img/datacentre/warehouse1.jpg" class="glightbox" data-gallery="warehouse-gallery">
-            <img src="assets/img/datacentre/warehouse1.jpg" alt="Warehouse 1" class="img-fluid datacentre-img portrait">
-          </a>
+            <!-- Warehouse Tab -->
+            <div class="tab-pane fade" id="warehouse" role="tabpanel">
+              <h3 class="mb-3">Closed Rack Server</h3>
+              <div class="row g-4">
+                <div class="col-md-3"><a href="assets/img/datacentre/warehouse1.jpg" class="glightbox" data-gallery="warehouse-gallery"><img src="assets/img/datacentre/warehouse1.jpg" class="img-fluid"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/warehouse2.jpg" class="glightbox" data-gallery="warehouse-gallery"><img src="assets/img/datacentre/warehouse2.jpg" class="img-fluid"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/warehouse3.jpg" class="glightbox" data-gallery="warehouse-gallery"><img src="assets/img/datacentre/warehouse3.jpg" class="img-fluid"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/warehouse4.jpg" class="glightbox" data-gallery="warehouse-gallery"><img src="assets/img/datacentre/warehouse4.jpg" class="img-fluid"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/warehouse5.png" class="glightbox" data-gallery="warehouse-gallery"><img src="assets/img/datacentre/warehouse5.png" class="img-fluid"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/warehouse6.png" class="glightbox" data-gallery="warehouse-gallery"><img src="assets/img/datacentre/warehouse6.png" class="img-fluid"></a></div>
+                <div class="col-md-3"><a href="assets/img/datacentre/warehouse7.png" class="glightbox" data-gallery="warehouse-gallery"><img src="assets/img/datacentre/warehouse7.png" class="img-fluid"></a></div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-md-3">
-          <a href="assets/img/datacentre/warehouse2.jpg" class="glightbox" data-gallery="warehouse-gallery">
-            <img src="assets/img/datacentre/warehouse2.jpg" alt="Warehouse 2" class="img-fluid datacentre-img portrait">
-          </a>
-        </div>
-        <div class="col-md-3">
-          <a href="assets/img/datacentre/warehouse3.jpg" class="glightbox" data-gallery="warehouse-gallery">
-            <img src="assets/img/datacentre/warehouse3.jpg" alt="Warehouse 3" class="img-fluid datacentre-img portrait">
-          </a>
-      </div>
-        <div class="col-md-3">
-          <a href="assets/img/datacentre/warehouse4.jpg" class="glightbox" data-gallery="warehouse-gallery">
-            <img src="assets/img/datacentre/warehouse4.jpg" alt="Warehouse 4" class="img-fluid datacentre-img portrait">
-          </a>
-        </div>
-      </div>
-      </div>
-  </div>
-</section>
-<!-- /Data Centre Section -->
+      </section>
+      <!-- /Data Centre Section -->
 
 
     <!-- Contact Section -->
@@ -741,10 +658,8 @@
 
               <button type="submit" class="btn btn-submit w-100">Free Consulting</button>
             </div>
-
             </div>
           </form>
-
           </div>
         </div>
         </div>
@@ -767,7 +682,6 @@
       <!-- /Embedded Map -->
 
       </div>
-
     </section><!-- /Contact Section -->
 
   </main>
@@ -777,19 +691,26 @@
     <div class="container footer-top">
       <div class="row gy-4">
       <div class="col-12 text-left mb-3">
-        <img src="assets/img/white-main-logo.png" alt="CDC Technologies Logo" class="footer-logo img-fluid" style="max-height:60px;">
+        <a href="index.html" class="footer-logo-link d-inline-block">
+          <img src="assets/img/white-main-logo.png" 
+               alt="CDC Technologies Logo" 
+               class="footer-logo img-fluid"
+               style="max-height:60px;">
+        </a>
       </div>
       <div class="col-lg-5 col-md-12 footer-about">
         <a href="index.html" class="logo d-flex align-items-center">
         <span class="sitename">CDC TECHNOLOGIES SDN BHD</span>
         </a>
         <b><p>Mon to Fri : 09:00 - 5:00</p></b>
-        <p>CDC TECHNOLOGIES SDN BHD (511036-K)</p>
-        <p>8Trium Tower, Tower 2</p>
-        <p>M2-16-08 Jln Cempaka SD 12/5,</p>
-        <p>Bandar Sri Damansara, 52200,</p>
-        <p>Kuala Lumpur.</p>
-
+        <a href="https://maps.app.goo.gl/ssNCAVx1gV33CEMd7" target="_blank" class="address-link">
+          <p>CDC TECHNOLOGIES SDN BHD (511036-K)</p>
+          <p>8Trium Tower, Tower 2,</p>
+          <p>M2-16-08 Jln Cempaka SD 12/5,</p>
+          <p>Bandar Sri Damansara, 52200,</p>
+          <p>Kuala Lumpur.</p>
+        </a>
+           
       </div>
 
         <div class="col-lg-2 col-6 footer-links">
@@ -813,9 +734,21 @@
 
         <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
           <h4>Contact Us</h4>
-          <p class="mt-6"><strong>Phone:</strong> <span>+6 03 6263 3612</span></p>
-          <p class="mt-6"><strong>NOC:</strong> <span>+6 03 6263 3612</span></p>
-          <p><strong>Email:</strong> <span>info@cdctechnologies.com.my</span></p>
+
+          <p class="mt-6">
+            <strong>Phone:</strong>
+            <a href="tel:+60362633612" class="contact-link">+6 03 6263 3612</a>
+          </p>
+
+          <p class="mt-6">
+            <strong>NOC:</strong>
+            <a href="tel:+60362633612" class="contact-link">+6 03 6263 3612</a>
+          </p>
+
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:info@cdctechnologies.com.my" class="contact-link">info@cdctechnologies.com.my</a>
+          </p>
         </div>
       </div>
     </div>

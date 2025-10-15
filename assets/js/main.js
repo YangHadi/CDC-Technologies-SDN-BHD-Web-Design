@@ -207,4 +207,166 @@ const lightbox = GLightbox({
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const tabButtons = document.querySelectorAll('#datacentreTabs button');
+    const progressBar = document.querySelector('.tab-progress-bar');
+    const datacentreSection = document.querySelector('#datacentre');
+    if (!datacentreSection || !tabButtons.length || !progressBar) return; // safety check
+
+    const allImages = datacentreSection.querySelectorAll('img');
+    const switchDuration = 10000; // 10 seconds per tab
+
+    const lightbox = GLightbox({ selector: '.glightbox' });
+
+    let currentIndex = 0;
+    let paused = false;
+    let startTime = null;
+    let elapsedTime = 0;
+    let animationFrame;
+    let isLightboxOpen = false;
+
+    // ------------------------------------
+    // Helper Functions
+    // ------------------------------------
+    function showTab(index) {
+      if (isLightboxOpen) return;
+      const activePane = document.querySelector('.tab-pane.active');
+      const nextButton = tabButtons[index];
+      const nextTab = new bootstrap.Tab(nextButton);
+
+      if (activePane) {
+        activePane.classList.remove('show');
+        setTimeout(() => nextTab.show(), 300);
+      } else {
+        nextTab.show();
+      }
+    }
+
+    function resetProgress() {
+      progressBar.style.width = '0%';
+      startTime = null;
+      elapsedTime = 0;
+    }
+
+    // ------------------------------------
+    // Progress Bar Animation
+    // ------------------------------------
+    function animateProgress(timestamp) {
+      if (isLightboxOpen) {
+        animationFrame = requestAnimationFrame(animateProgress);
+        return;
+      }
+
+      if (!startTime) startTime = timestamp;
+
+      if (paused) {
+        animationFrame = requestAnimationFrame(animateProgress);
+        return;
+      }
+
+      const runtime = timestamp - startTime + elapsedTime;
+      const progress = Math.min((runtime / switchDuration) * 100, 100);
+      progressBar.style.width = `${progress}%`;
+
+      if (runtime >= switchDuration) {
+        currentIndex = (currentIndex + 1) % tabButtons.length;
+        showTab(currentIndex);
+        resetProgress();
+      }
+
+      animationFrame = requestAnimationFrame(animateProgress);
+    }
+
+    // ------------------------------------
+    // Control Functions
+    // ------------------------------------
+    function pauseAutoSwitch() {
+      if (!paused) {
+        paused = true;
+        elapsedTime += performance.now() - startTime;
+        progressBar.parentElement.classList.add('paused');
+      }
+    }
+
+    function resumeAutoSwitch() {
+      if (paused && !isLightboxOpen) {
+        paused = false;
+        startTime = performance.now();
+        progressBar.parentElement.classList.remove('paused');
+      }
+    }
+
+    function startAutoSwitch() {
+      cancelAnimationFrame(animationFrame);
+      paused = false;
+      resetProgress();
+      animationFrame = requestAnimationFrame(animateProgress);
+    }
+
+    // ------------------------------------
+    // Event Listeners
+    // ------------------------------------
+    allImages.forEach(img => {
+      img.addEventListener('mouseenter', pauseAutoSwitch);
+      img.addEventListener('mouseleave', resumeAutoSwitch);
+      img.addEventListener('click', () => {
+        isLightboxOpen = true;
+        pauseAutoSwitch();
+        cancelAnimationFrame(animationFrame);
+      });
+    });
+
+    // GLightbox events
+    function handleLightboxClose() {
+      isLightboxOpen = false;
+      paused = false;
+
+      progressBar.style.width = '0%';
+      progressBar.parentElement.classList.remove('paused');
+
+      setTimeout(() => {
+        const stillOpen = document.querySelector('.glightbox-container')?.classList.contains('glightbox-open');
+        if (!stillOpen) {
+          startTime = null;
+          elapsedTime = 0;
+          cancelAnimationFrame(animationFrame);
+          animationFrame = requestAnimationFrame(animateProgress);
+        } else {
+          document.querySelector('.glightbox-container')?.classList.remove('glightbox-open');
+          isLightboxOpen = false;
+          startAutoSwitch();
+        }
+      }, 800);
+    }
+
+    lightbox.on('open', () => {
+      isLightboxOpen = true;
+      pauseAutoSwitch();
+      cancelAnimationFrame(animationFrame);
+    });
+    lightbox.on('close', handleLightboxClose);
+    lightbox.on('onClose', handleLightboxClose);
+
+    tabButtons.forEach((btn, index) => {
+      btn.addEventListener("click", () => {
+        if (isLightboxOpen) return;
+        currentIndex = index;
+        startAutoSwitch();
+      });
+    });
+
+    // Start auto-switch
+    startAutoSwitch();
+
+    // Safety watcher for stuck GLightbox
+    setInterval(() => {
+      const openBox = document.querySelector('.glightbox-container.glightbox-open');
+      if (!openBox && isLightboxOpen) {
+        isLightboxOpen = false;
+        startAutoSwitch();
+      }
+    }, 1000);
+  });
+
 })();
